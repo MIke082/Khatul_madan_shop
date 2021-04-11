@@ -9,24 +9,6 @@ const Cart = (props) => {
 
     const cart = props.location.state.cart;
     const price = count * cart.price;
-    
-
-    // let listCart = [];
-    // let totalPrice = 0;
-
-    
-    // cart.foreach(elem => {
-    //     listCart.push(cart[elem]);
-    // // console.log(totalPrice);  
-    //    });   
-
-    // cart && !!cart.length && cart.foreach(item =>  {
-    //     listCart.push(cart[item],
-    //         totalPrice+= price * count
-    //         )
-    // // })
-    //                 console.log(listCart);
-    //                 console.log(totalPrice);
 
     function handleClickgoBack() {
         window.history.back();

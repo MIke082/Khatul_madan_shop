@@ -1,6 +1,11 @@
 .main-div-mainPage {
-    background-color: rgba(139, 139, 139, 0.356);
-    border: 1px solid red;
+    margin: 50px auto;
+}
+
+.main-div-mainPage h4 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: bold;
 }
 
 .main-div-mainPage img {

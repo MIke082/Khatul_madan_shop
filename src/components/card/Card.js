@@ -3,16 +3,10 @@ import { history } from '../history';
 import img from '../../img/img.jpg';
 import './Card.css'
 import Modal from '../../modal/Modal';
+import Header from '../header/Header';
 
 const Card = ({ item, index }) => {
     const [modalActive, setModalActive] = useState(false);
-
-    // function handleClick() {
-    //     history.push({
-    //         pathname: "/header",
-    //         state: { header: item}
-    //     });
-    // }
 
     function handleClickgoBack() {
         setModalActive(false);
@@ -24,8 +18,8 @@ const Card = ({ item, index }) => {
             state: { cart: item }
         });
     }
+    
     return (
-
         <div className="main-div">
             <button onClick={() => setModalActive(true)} >
                 <div key={index} className="card-div">
@@ -41,28 +35,27 @@ const Card = ({ item, index }) => {
                     </div>
 
                     <Modal active={modalActive} setActive={setModalActive}>
-                            <p>{item.supplier}</p>
-                            <div className="card-div">
-                                <div className="left-side">
-                                    <img src={img} alt={"img"} />
-                                    <p>Цена:{item.price} ₪ за {item.measure}</p>
-                                </div>
-                                <div className="right-side">
-                                    <h4>{item.name}</h4>
-                                    <p>Не достигнут порог закупки</p>
-                                    <p>При закупке клубом:</p>
-                                    <p>{item.dueDate}</p>
-                                </div>
+                        <p>{item.supplier}</p>
+                        <div className="card-div">
+                            <div className="left-side">
+                                <img src={img} alt={"img"} />
+                                <p>Цена:{item.price} ₪ за {item.measure}</p>
                             </div>
-                            <div className="btn">
-                                <button onClick={handleClickgoBack}>Назад</button>
-                                <button onClick={handleClickToCart}>Заказать</button>
+                            <div className="right-side">
+                                <h4>{item.name}</h4>
+                                <p>Не достигнут порог закупки</p>
+                                <p>При закупке клубом:</p>
+                                <p>{item.dueDate}</p>
                             </div>
+                        </div>
+                        <div className="btn">
+                            <button onClick={handleClickgoBack}>Назад</button>
+                            <button onClick={handleClickToCart}>Заказать</button>
+                        </div>
                     </Modal>
                 </div>
             </button>
         </div>
-
     );
 };
 

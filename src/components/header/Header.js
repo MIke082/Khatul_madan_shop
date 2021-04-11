@@ -1,22 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import { history } from '../history';
+import './Header.css';
 
-const Header = (props) => {
-    // const propsFromCard = props.location.state.card;
+const Header = () => {
 
-    // function handleClick() {
-    //     history.push({
-    //         pathname: "/itemCard",
-    //         state: { card: propsFromCard }
-    //     });
-    // }
     return (
-        <div>
-            <div>
-                <Link to="/">Home</Link>
-                <Link to="/list">Carts</Link>
-                {/* <Link to= "/basket"  onClick={()=> handleClick}  >Basket</Link> */}
+        <div className="main-div-header">
+            <div className="main-div-link">
+                <Link to="/">Главная страница</Link>
+                <Link to="/list">Создать акцию</Link>
+                <Link to="/list">Мои акции</Link>
+                <Link to="/list">Текущии акции</Link>
+                {<Link to="/cart">Корзина</Link> ? '' : <Link to="/cart">Корзина</Link>}
             </div>
         </div>
     );

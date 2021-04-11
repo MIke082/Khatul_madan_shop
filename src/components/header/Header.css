@@ -1,0 +1,11 @@
+.main-div-header{
+   width: 500px;
+   margin: 20px auto;
+   border: 1px solid black;
+   border-radius: 15px;
+}
+
+.main-div-link{
+    display: flex;
+    justify-content: space-evenly;
+}

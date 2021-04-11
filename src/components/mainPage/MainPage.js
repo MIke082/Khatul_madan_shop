@@ -10,15 +10,13 @@ import { history } from '../history';
 
 const MainPage = () => {
 
-
     return (
         <div className="main-div-mainPage">
+            <h4>Добро пожаловать в Коним Хахамим</h4>
             <div className="img-div">
-               <button onClick={()=> alert('Временно не доступно')}><img src={newSale} alt={"newSale"}/></button> 
-
-                <button onClick={()=> history.push('/list')}><img src={imgSale} alt={"sale"} /></button>
-
-                <button onClick={()=> alert('Временно не доступно')}><img src={buyers} alt={"buyers"} /></button>
+                <button onClick={() => alert('Временно не доступно')}><img src={newSale} alt={"newSale"} /></button>
+                <button onClick={() => history.push('/list')}><img src={imgSale} alt={"sale"} /></button>
+                <button onClick={() => alert('Временно не доступно')}><img src={buyers} alt={"buyers"} /></button>
             </div>
             <div className="img-div text">
                 <p>Создать акцию</p>
@@ -26,11 +24,9 @@ const MainPage = () => {
                 <p className="text-sale">Текущие акции</p>
             </div>
             <div className="img-div">
-            <button onClick={()=> alert('Временно не доступно')}><img src={currentSale} alt={"currentSale"} /></button>
-
-            <button onClick={()=> alert('Временно не доступно')}><img src={newSalsettingsPaterne} alt={"newSalsettingsPaterne"} /></button>
-
-            <button onClick={()=> alert('Временно не доступно')}><img src={settingUser} alt={"settingUser"} /></button>
+                <button onClick={() => alert('Временно не доступно')}><img src={currentSale} alt={"currentSale"} /></button>
+                <button onClick={() => alert('Временно не доступно')}><img src={newSalsettingsPaterne} alt={"newSalsettingsPaterne"} /></button>
+                <button onClick={() => alert('Временно не доступно')}><img src={settingUser} alt={"settingUser"} /></button>
             </div>
             <div className="img-div text text-down">
                 <p>Покупатели</p>
