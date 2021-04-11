@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { history } from '../history';
 import img from '../../img/img.jpg';
 import './Card.css'
-import Modal from '../../modal/Modal';
+import Modal from '../modal/Modal';
 import Header from '../header/Header';
 
 const Card = ({ item, index }) => {
@@ -16,9 +16,12 @@ const Card = ({ item, index }) => {
         history.push({
             pathname: "/cart",
             state: { cart: item }
-        });
+        })
     }
-    
+
+    const dateReverse = item.dueDate;
+    const newdate = dateReverse.split("-").reverse().join("-");
+
     return (
         <div className="main-div">
             <button onClick={() => setModalActive(true)} >
@@ -31,7 +34,7 @@ const Card = ({ item, index }) => {
                         <h6>{item.name} </h6>
                         <p id="collection">Сбор участников</p>
                         <p>Не достигнут порог закупки</p>
-                        <p>{item.dueDate} - Окончание приема заявок</p>
+                        <p>{newdate} - Окончание приема заявок</p>
                     </div>
 
                     <Modal active={modalActive} setActive={setModalActive}>
@@ -45,7 +48,7 @@ const Card = ({ item, index }) => {
                                 <h4>{item.name}</h4>
                                 <p>Не достигнут порог закупки</p>
                                 <p>При закупке клубом:</p>
-                                <p>{item.dueDate}</p>
+                                <p>{newdate} - Окончание приема заявок</p>
                             </div>
                         </div>
                         <div className="btn">

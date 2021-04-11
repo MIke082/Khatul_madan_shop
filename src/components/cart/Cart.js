@@ -5,7 +5,7 @@ import Header from '../header/Header';
 
 
 const Cart = (props) => {
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(1);
 
     const cart = props.location.state.cart;
     const price = count * cart.price;
@@ -17,7 +17,7 @@ const Cart = (props) => {
     return (
         <div className="header-cart">
             <Header />
-            <h5>Корзина(1)</h5>
+            <h5>Корзина {count}</h5>
             <div className="main-div-cart" >
                 <img src={img} alt={"img"} />
                 <div className="product-div">

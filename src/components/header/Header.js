@@ -12,6 +12,7 @@ const Header = () => {
                 <Link to="/list">Мои акции</Link>
                 <Link to="/list">Текущии акции</Link>
                 {<Link to="/cart">Корзина</Link> ? '' : <Link to="/cart">Корзина</Link>}
+                <Link to="/cart">Корзина</Link>
             </div>
         </div>
     );
