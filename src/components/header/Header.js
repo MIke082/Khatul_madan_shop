@@ -15,7 +15,7 @@ const Header = (props) => {
         <div>
             <div>
                 <Link to="/">Home</Link>
-                {/* <Link to="/">Carts</Link> */}
+                <Link to="/list">Carts</Link>
                 {/* <Link to= "/basket"  onClick={()=> handleClick}  >Basket</Link> */}
             </div>
         </div>

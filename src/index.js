@@ -4,7 +4,7 @@ import App from './App';
 import {Router, Route, Switch } from "react-router-dom";
 import { history } from './components/history';
 import List from './components/list/List';
-import Basket from './components/cart/Cart';
+import Cart from './components/cart/Cart';
 import Header from './components/header/Header';
 
 
@@ -14,7 +14,7 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/" component={App} />
         <Route path="/list" component={List} />
-        <Route path="/basket" component={Basket} />
+        <Route path="/cart" component={Cart} />
         <Route path="/header" component={Header} />
       </Switch>
     </Router>

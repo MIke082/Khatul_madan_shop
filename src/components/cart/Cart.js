@@ -4,25 +4,43 @@ import img from '../../img/img.jpg';
 import Header from '../header/Header';
 
 
-const Basket = (props) => {
+const Cart = (props) => {
     const [count, setCount] = useState(0);
 
-    const basket = props.location.state.basket;
-    const price = count * basket.price;
+    const cart = props.location.state.cart;
+    const price = count * cart.price;
+    
+
+    // let listCart = [];
+    // let totalPrice = 0;
+
+    
+    // cart.foreach(elem => {
+    //     listCart.push(cart[elem]);
+    // // console.log(totalPrice);  
+    //    });   
+
+    // cart && !!cart.length && cart.foreach(item =>  {
+    //     listCart.push(cart[item],
+    //         totalPrice+= price * count
+    //         )
+    // // })
+    //                 console.log(listCart);
+    //                 console.log(totalPrice);
 
     function handleClickgoBack() {
         window.history.back();
     }
 
     return (
-        <div className="header-basket">
+        <div className="header-cart">
             <Header />
             <h5>Корзина(1)</h5>
-            <div className="main-div-basket" >
+            <div className="main-div-cart" >
                 <img src={img} alt={"img"} />
                 <div className="product-div">
-                    <h6>Наименование: {basket.name}</h6>
-                    <p>Стоимость товара: {basket.price} ₪</p>
+                    <h6>Наименование: {cart.name}</h6>
+                    <p>Стоимость товара: {cart.price} ₪</p>
                     <input
                         placeholder='Введите количество товара:'
                         type="text"
@@ -47,4 +65,4 @@ const Basket = (props) => {
     );
 };
 
-export default Basket;
+export default Cart;

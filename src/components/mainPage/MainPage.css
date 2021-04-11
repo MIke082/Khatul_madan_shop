@@ -1,0 +1,31 @@
+.main-div-mainPage {
+    background-color: rgba(139, 139, 139, 0.356);
+    border: 1px solid red;
+}
+
+.main-div-mainPage img {
+    width: 100px;
+}
+
+.img-div {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 10px;
+}
+
+.text{
+    font-weight: bold;
+}
+.text-down{
+    margin-left: 35px;
+}
+.text-my-sale{
+    margin-left: 20px;
+}
+.text-sale{
+    margin-left: 30px;
+
+}
+.text-settings{
+    margin-left: 25px;
+}

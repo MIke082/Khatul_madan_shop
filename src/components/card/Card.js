@@ -18,10 +18,10 @@ const Card = ({ item, index }) => {
         setModalActive(false);
     }
 
-    function handleClickToBasket() {
+    function handleClickToCart() {
         history.push({
-            pathname: "/basket",
-            state: { basket: item }
+            pathname: "/cart",
+            state: { cart: item }
         });
     }
     return (
@@ -56,7 +56,7 @@ const Card = ({ item, index }) => {
                             </div>
                             <div className="btn">
                                 <button onClick={handleClickgoBack}>Назад</button>
-                                <button onClick={handleClickToBasket}>Заказать</button>
+                                <button onClick={handleClickToCart}>Заказать</button>
                             </div>
                     </Modal>
                 </div>
