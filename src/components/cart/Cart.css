@@ -1,0 +1,35 @@
+.header-basket h5 {
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 15px;
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.main-div-basket {
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid black;
+    width: 200px;
+}
+
+.main-div-basket img {
+    width: 130px;
+    height: 80px;
+    margin: 10px;
+}
+
+.product-div input {
+    width: 170px;
+    border-bottom: 1px solid black;
+    font-size: 10px;
+}
+
+.btn-counter button {
+    width: 80px;
+    border-radius: 20px;
+    border: none;
+    margin: 10px 0 10px 5px;
+
+}
