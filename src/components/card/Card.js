@@ -3,7 +3,6 @@ import { history } from '../history';
 import img from '../../img/img.jpg';
 import './Card.css'
 import Modal from '../modal/Modal';
-import Header from '../header/Header';
 
 const Card = ({ item, index }) => {
     const [modalActive, setModalActive] = useState(false);

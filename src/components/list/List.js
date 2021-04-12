@@ -1,25 +1,39 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Card from '../card/Card';
 import Header from '../header/Header';
 import './List.css';
-const List = () => {
-    const [todos, setTodos] = useState([]);
+import { connect } from 'react-redux';
+import { getProductCreator } from '../../store/action';
+
+const List = (props) => {
 
     useEffect(() => {
-        fetch(`https://sclub.in.ua/actions/all/page/0/100`)
-            .then(response => response.json())
-            .then(json => setTodos(json))
+        props.getProduct()
     }, [])
 
     return (
         <>
         <Header/>
         <div className="main-div">
-            {todos.entities && !!todos.entities.length
-                && todos.entities.map((item, index) => <Card item={item} key={index} />)}
+            {props.product && props.product.length
+                && props.product.map((item, index) => <Card item={item} key={index} />)}
         </div>
         </>
     );
 };
 
-export default List;
+const mapStateToProps = (state) => {
+    return {
+        product: state
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        getProduct: () => {
+            dispatch(getProductCreator())
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(List);

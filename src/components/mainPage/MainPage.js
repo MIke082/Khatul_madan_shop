@@ -12,7 +12,7 @@ const MainPage = () => {
 
     return (
         <div className="main-div-mainPage">
-            <h4>Добро пожаловать в Коним Хахамим</h4>
+            <h4>Добро пожаловать в Коним Хахамим!</h4>
             <div className="img-div">
                 <button onClick={() => alert('Временно не доступно')}><img src={newSale} alt={"newSale"} /></button>
                 <button onClick={() => history.push('/list')}><img src={imgSale} alt={"sale"} /></button>
