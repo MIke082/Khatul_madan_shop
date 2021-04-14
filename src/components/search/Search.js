@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { getProductCreator, searchProductCreator } from '../../store/action';
+import './Seach.css';
 
 const Search = (props) => {
     const [find, setFind] = useState({search: ''})
@@ -16,19 +17,17 @@ const Search = (props) => {
         }
 
     return (
-        <div>
-            <div className="search">
+            <div className="search-main-div">
                 <input
                     type='text'
-                    placeholder='Search'
+                    placeholder='Поиск'
                     onChange={(e)=> onChabge(e)}
                 />
-                <div className="btn">
-                    <button onClick={searchProduct}>Search</button>
+                <div className="">
+                    <button onClick={searchProduct}>Поиск</button>
                 </div>
 
             </div>
-        </div>
     );
 };
 

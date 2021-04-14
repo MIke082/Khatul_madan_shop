@@ -1,0 +1,16 @@
+.search-main-div{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.search-main-div input{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+
+.search-main-div button{
+    border-radius: 10px;
+    margin-left: 3px;
+}
