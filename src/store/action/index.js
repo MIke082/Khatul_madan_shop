@@ -13,8 +13,21 @@ export const getProductCreator = () => {
     return (dispatch) => {
      return axios.get(`${url}`) 
         .then((response) => {
-            console.log(response.data.entities,'uuu');
             dispatch(getAllProduct(response.data.entities))
         })
+    }
+}
+
+export const searchProduct = (nameOfProduct) => {
+    return{
+        type: 'SEARCH_PRODUCT',
+        payload: nameOfProduct
+    }
+}
+
+export const searchProductCreator = (nameOfProduct) => {
+    return (dispatch) => {
+        console.log(nameOfProduct, 'actionFindProduct');
+        dispatch(searchProduct(nameOfProduct));
     }
 }

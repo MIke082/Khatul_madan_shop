@@ -51,8 +51,8 @@ const Card = ({ item, index }) => {
                             </div>
                         </div>
                         <div className="btn">
-                            <button onClick={handleClickgoBack}>Назад</button>
-                            <button onClick={handleClickToCart}>Заказать</button>
+                            {/* <button onClick={handleClickgoBack}>Назад</button>
+                            <button onClick={handleClickToCart}>Заказать</button> */}
                         </div>
                     </Modal>
                 </div>
